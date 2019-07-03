@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/guide/guide",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/video/video",
+    "pages/mine/mine",
+    "pages/friend/friend",
+    "pages/account/account"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle":"white",
+    "backgroundColor":"f2f4f0",
+    "color":"#838a87",
+    "selectedColor":"#ff5043",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath":"img/yuan.png",
+        "selectedIconPath":"img/yuan-active.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "视频",
+        "iconPath":"img/shipin.png",
+        "selectedIconPath":"img/shipin-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath":"img/mine.png",
+        "selectedIconPath":"img/mine-active.png"
+      },
+      {
+        "pagePath": "pages/friend/friend",
+        "text": "朋友",
+        "iconPath":"img/friend.png",
+        "selectedIconPath":"img/friend-active.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "账号",
+        "iconPath":"img/account.png",
+        "selectedIconPath":"img/account-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
