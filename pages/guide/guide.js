@@ -15,7 +15,7 @@ Page({
         url: '/pages/index/index'
       })
       clearInterval(tm)
-    },100)
+    },2000)
     
   },
   onUnload:function(){

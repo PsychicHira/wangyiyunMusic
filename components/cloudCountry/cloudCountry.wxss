@@ -1,0 +1,56 @@
+/* currentLine */
+.currentLine{
+    height: 10rpx;
+    background-color:#f8f8f8;
+}
+.cloudCountry-container{
+    margin: 30rpx 2%;
+}
+
+.cloudCountry-description{
+    margin-bottom: 30rpx;
+    font-size: 30rpx;
+    color: #999999;
+}
+.cloudCountry-video{
+    border-radius: 25rpx;
+    /* overflow: hidden来切掉多出去的部分 */
+    overflow: hidden;
+}
+.cloudCountry-video video{
+    width: 100%;
+}
+.cloudCountry-video .textContent{
+    height: 100rpx;
+    background-color: #f8f8f8;
+    margin-top: -7rpx;
+    line-height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    font-weight: bold;
+}
+.cloudCountry-video .textContent image{
+    height: 60rpx;
+    width: 60rpx;
+    border-radius: 50%;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+.cloudCountry-interaction{
+    height: 90rpx;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    /* flex布局，blick垂直居中的关键 */
+    align-items: center;
+    padding: 0 20rpx;
+}
+.cloudCountry-interaction text{
+    margin: 0 50rpx 0 20rpx;
+}
+.cloudCountry-interaction image{
+    height: 30rpx;
+    width: 30rpx;
+}

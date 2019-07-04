@@ -1,7 +1,10 @@
 {
   "pages": [
-    "pages/guide/guide",
+    
     "pages/index/index",
+    "components/search/search",
+    "pages/guide/guide",
+    "components/cloudCountry/cloudCountry",
     "pages/logs/logs",
     "pages/video/video",
     "pages/mine/mine",
@@ -12,7 +15,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "borderStyle":"white",

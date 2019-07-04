@@ -1,0 +1,40 @@
+<template name="cloudCountry">
+    
+    <!-- neirong -->
+    <view class="cloudCountry-container">
+        
+        <!-- 描述 -->
+        <view class="cloudCountry-description">
+            <text>薛之谦最新单曲《木偶人》 </text>
+        </view>
+        <!-- 视频区域 -->
+        <view class="cloudCountry-video">
+            <!-- 视频 -->
+            <video src="https://vodkgeyttp8.vod.126.net/cloudmusic/90b2/core/faaa/1bd7de3a9bc91db444779908a8003075.mp4?wsSecret=fd38d7bd1c4ec93f97a6353bf9528a0e&wsTime=1562230690"></video>
+            <!-- 文字 -->
+            <view class="textContent">
+                <!-- title -->
+                <text>如果交出真心就能成为不受伤的木偶人 是...</text>
+                <!-- avatar -->
+                <image src="/img/avatar1.png"/>
+            </view>
+        </view>
+        <!-- 互动区域 -->
+        <view class="cloudCountry-interaction">
+            <!-- 点赞 评论 -->
+            <view class="like">
+                <image src="/img/dianzan.png" />
+                <text>51</text>
+                <image src="/img/comments.png" />
+                <text>9</text>
+            </view>
+            <!-- 更多 -->
+            <view class="more">
+                <image src="/img/more.png" />
+            </view>
+        </view>
+        <!-- 分隔条 -->
+    
+    </view>
+    <view class="currentLine"></view>
+</template>

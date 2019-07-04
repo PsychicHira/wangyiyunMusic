@@ -1,1 +1,167 @@
-<!--pages/index/index.wxml-->
+<import is="" src="../../components/search/search.wxml" />
+<import is="" src="../../components/cloudCountry/cloudCountry.wxml" />
+<view>
+    <!-- 搜索框 -->
+    <view class="search">
+        <template is="search"></template>
+    </view>
+    <!-- 轮播 -->
+    <view class="lunboCaontainer">
+        <swiper autoplay indicator-dots interval="1000">
+            <swiper-item class="" item-id="">
+                <image mode="aspectFill" class="" src="/img/lunbo1.jpg"></image>
+            </swiper-item>
+            <swiper-item class="" item-id="">
+                <image mode="aspectFill" class="" src="/img/lunbo2.jpg"></image>
+            </swiper-item>
+            <swiper-item class="" item-id="">
+                <image mode="aspectFill" class="" src="/img/lunbo3.jpg"></image>
+            </swiper-item>
+            <swiper-item class="" item-id="">
+                <image mode="aspectFill" class="" src="/img/lunbo4.jpg"></image>
+            </swiper-item>
+            <swiper-item class="" item-id="">
+                <image mode="aspectFill" class="" src="/img/lunbo5.jpg"></image>
+            </swiper-item>
+            <swiper-item class="" item-id="">
+                <image mode="aspectFill" class="" src="/img/lunbo6.jpg"></image>
+            </swiper-item>
+            <swiper-item class="" item-id="">
+                <image mode="aspectFill" class="" src="/img/lunbo7.jpg"></image>
+            </swiper-item>
+            <swiper-item class="" item-id="">
+                <image mode="aspectFill" class="" src="/img/lunbo8.jpg"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 分类 -->  
+    <view class="categrory">
+        <view>
+            <image src="/img/tuijian.png"></image><text>每日推荐</text>
+        </view>
+        <view>
+            <image src="/img/gedan.png"></image><text>歌单</text>
+        </view>
+        <view>
+            <image src="/img/paihang.png"></image><text>排行榜</text>
+        </view>
+        <view>
+            <image src="/img/diantai.png"></image><text>电台</text>
+        </view>
+        <view>
+            <image src="/img/zhibo.png"></image><text>直播</text>
+        </view>  
+    </view>
+   <!-- hr线 -->
+   <view class="line"> </view>
+    <!-- 推荐歌单 -->
+    <view class="songList">
+        <!-- 标题 -->
+        <view class="title">
+            <text class="left">推荐歌单</text>
+            <text class="right">歌单广场</text>
+        </view>
+        <!-- 歌单大容器 -->
+        <view class="container">
+            <!-- 歌单 -->
+            <view class="song">
+                <!-- 右上角播放量 -->
+                <view class="Amount">
+                    <text>▷166万</text>
+                </view>
+                <image class="img" src="/img/songList1.jpg" />
+                <text class="text">小众英文歌歌单！却意外的好听</text>
+            </view>
+            <!-- 歌单 -->
+            <view class="song">
+                <!-- 右上角播放量 -->
+                <view class="Amount">
+                    <text>▷166万</text>
+                </view>
+                <image class="img" src="/img/songList2.jpg" />
+                <text class="text">凉城夏日＆在盛夏里，饮一杯清凉纯音水</text>
+            </view>
+            <!-- 歌单 -->
+            <view class="song">
+                <!-- 右上角播放量 -->
+                <view class="Amount">
+                    <text>▷166万</text>
+                </view>
+                <image class="img" src="/img/songList3.jpg" />
+                <text class="text">心怀明朗，温柔就会自动靠近</text>
+            </view>
+            <!-- 歌单 -->
+            <view class="song">
+                <!-- 右上角播放量 -->
+                <view class="Amount">
+                    <text>▷166万</text>
+                </view>
+                <image class="img" src="/img/songList4.jpg" />
+                <text class="text">直抵心灵深处的欧美伤感女嗓</text>
+            </view>
+            <!-- 歌单 -->
+            <view class="song">
+                <!-- 右上角播放量 -->
+                <view class="Amount">
+                    <text>▷166万</text>
+                </view>
+                <image class="img" src="/img/songList5.jpg" />
+                <text class="text">国内各大酒吧热播单曲</text>
+            </view>
+            <!-- 歌单 -->
+            <view class="song">
+                <!-- 右上角播放量 -->
+                <view class="Amount">
+                    <text>▷166万</text>
+                </view>
+                <image class="img" src="/img/songList6.jpg" />
+                <text class="text">空灵民谣 | 游走于冰点的旷久孤寂</text>
+            </view>
+        </view>
+    </view>
+    <!-- 新碟新歌 -->
+    <view class="newSong">
+        <!-- 标题 -->
+        <view class="title">
+            <text class="left">新碟 | 新歌</text>
+            <text class="right">更多新碟</text>
+        </view>
+        <!-- 歌单大容器 -->
+        <view class="container">
+            <!-- 单曲 -->
+            <view class="song">
+                <image class="img" src="/img/newSong1.jpg" />
+                <text class="text">You Need To Calm Down</text>
+                <text class="name">Taylor Swift</text>
+            </view>
+            <!-- 单曲 -->
+            <view class="song">
+                <image class="img" src="/img/newSong2.jpg" />
+                <text class="text">Maps</text>
+                <text class="name">Far East Movement</text>
+            </view>
+            <!-- 单曲 -->
+            <view class="song">
+                <image class="img" src="/img/newSong3.jpg" />
+                <text class="text">Fly Now！敢傻就飞！</text>
+                <text class="name">卢广仲</text>
+            </view>
+        </view>
+    </view>   
+    <!-- 粗分隔条 -->
+    <view class="currentLine"></view>
+    <!-- 云村精选 -->
+    <view>
+         <!-- 标题 -->
+        <view class="cloudCountry-title">
+            <text class="left">云村精选</text>
+            <view>
+                <image src="/img/shuaxin.png" />
+                <text class="right">获取新内容</text>
+            </view>
+        </view>
+        <template is="cloudCountry"></template>
+        <template is="cloudCountry"></template>
+        <template is="cloudCountry"></template>
+    </view>
+</view>

@@ -1,1 +1,154 @@
-/* pages/index/index.wxss */
+/* 搜索 */
+@import '../../components/search/search.wxss';
+@import '../../components/cloudCountry/cloudCountry.wxss';
+
+.search{
+    height: 70rpx;
+    /* background-color: brown; */
+    margin-bottom: 40rpx;
+}
+/* 轮播 */
+.lunboCaontainer image{
+    width: 96%;
+    margin-left: 2%;
+    height:100%;
+    border-radius: 40rpx;
+}
+.categrory{
+    margin-top: 40rpx;
+    display: flex;
+    justify-content:space-around; 
+}
+.categrory view{
+    width: 100rpx;
+    height: 100rpx;
+}
+.categrory image{
+    width: 100%;
+    height: 100%;
+}
+.categrory text{
+    display: flex;
+    font-size: 24rpx;
+    align-items: center;
+    justify-content: center;
+}
+/* line */
+.line{
+    /* width: 100%; */
+    height: 2rpx;
+    background-color:#e6e6e6;
+    margin: 60rpx 0 40rpx 0;
+}
+/* 推荐歌单 */
+.songList .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.songList .title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2%;
+}
+.songList .title .left{
+    /* 设置数值无效，只能用英文 */
+    font-weight: bold;
+    font-size: 35rpx;
+}
+.songList .title .right{
+    font-size: 27rpx;
+    border: 1px solid #e6e6e6;
+    border-radius: 30rpx;
+    padding:10rpx 20rpx;
+}
+.songList .Amount{
+    position: relative;
+    top:40rpx;
+    padding-right: 10rpx;
+}
+.songList .Amount text{
+    float: right;
+    color: #fff;
+    font-size: 25rpx;
+}
+.songList .img{
+    width: 215rpx;
+    height: 215rpx;
+}
+.songList .song{
+    display: flex;
+    flex-direction: column;
+    width: 215rpx;
+}
+.songList .text {
+    font-size: 27rpx;
+    display: flex;
+    /* 超出两行文字变...的代码 */
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    overflow:hidden; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+}
+/* 新碟新歌 */
+.newSong{
+    margin: 60rpx 0 30rpx 0;
+}
+.newSong .container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30rpx;
+}
+.newSong .title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2%;
+    margin-bottom: 30rpx;
+}
+.newSong .container .img{
+    width: 215rpx;
+    height: 215rpx;
+}
+.newSong .title .right{
+    font-size: 27rpx;
+    border: 1px solid #e6e6e6;
+    border-radius: 30rpx;
+    padding:10rpx 20rpx;
+}
+.newSong .song{
+    display: flex;
+    flex-direction: column;
+    width: 215rpx;
+}
+.newSong .text,.newSong .name {
+    font-size: 27rpx;
+    display: flex;
+    /* 超出两行文字变...的代码 */
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    overflow:hidden; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1; 
+}
+.newSong .name{
+    color: gray;
+}
+/* yuncun */
+.cloudCountry-title{
+    border-bottom: 2rpx solid #e6e6e6;
+    padding:30rpx 0;
+    margin-bottom: 30rpx;
+    display: flex;
+    justify-content: space-between
+}
+.cloudCountry-title .left,.cloudCountry-title .right{
+    font-weight: bold;
+    font-size: 35rpx;
+}
+.cloudCountry-title image{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+    transform: translateY(5rpx)
+}

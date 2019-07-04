@@ -1,0 +1,17 @@
+<template name="search">
+    <view class="searchContainer" >
+        <view>
+            <image src="/img/huatong.png"></image>
+        </view>
+        <view>
+            <input class="searchInput" type="text" confirm-type="search" placeholder=""/>
+            <view class="searchContent">
+                <icon class="" type="search" size="20" color="" />
+                <text>周杰伦</text>
+            </view>
+        </view>
+        <view>
+            <image src="/img/playing.png"></image>
+        </view>
+    </view>
+</template>
