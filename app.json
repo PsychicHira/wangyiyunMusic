@@ -1,9 +1,9 @@
 {
   "pages": [
-    
+    "pages/guide/guide",
     "pages/index/index",
     "components/search/search",
-    "pages/guide/guide",
+    
     "components/cloudCountry/cloudCountry",
     "pages/logs/logs",
     "pages/video/video",
