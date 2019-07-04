@@ -16,7 +16,6 @@ Page({
       })
       clearInterval(tm)
     },2000)
-    
   },
   onUnload:function(){
 
