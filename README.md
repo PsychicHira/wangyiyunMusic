@@ -12,13 +12,13 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 1. 新建项目
 
-   ![image](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\1.png)
+   ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/1.png)
 
 2. 在小程序根目录下新建img文件夹，暂时存放图片
 
 3. 把引导页放进去
 
-   ![image](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\2.png)
+   ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/2.png)
 
 4. 删除app.wxss中的默认样式
 
@@ -135,11 +135,11 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 - 搜索框
 
-  ![image](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\3.png)
+  ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/3.png)
 
 - 云村精选
 
-  ![image](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\4.png)
+  ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/4.png)
 
 # 搜索框组件
 
