@@ -5,7 +5,8 @@
 #### 小程序gif首页效果图如下（网速影响可能会加载过慢）
 ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/index.GIF)
 
-接口文档：
+#### 接口文档：
+
 https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 # 创建项目
@@ -142,3 +143,203 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
   ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/4.png)
 
 # 搜索框组件
+
+# 搜索框组件和云村精选组件
+
+在根目录新建文件夹components存放组件用，新建search文件夹，按照原版写样式，没什么好说的。
+
+云村精选同。
+
+将组件引用至index中(这里要会小程序的组件使用)
+
+```html
+<import is="search" src="../../components/search/search.wxml" />
+<import is="cloudCountry" src="../../components/cloudCountry/cloudCountry.wxml" />
+```
+
+
+
+到此首页静态页面完毕，下面开始动态获取数据
+
+# 网易云音乐后台
+
+1. 安装
+
+   ```
+   $ git clone git@github.com:Binaryify/NeteaseCloudMusicApi.git
+   
+   $ npm install
+   ```
+
+2. 运行
+
+   ```
+   $ node app.js
+   ```
+
+# 封装API
+
+思路
+
+1. 在根目录utils中新建api.js
+
+2. 声明一个常量存放基本路径
+
+3. 声明一个常量函数，返回一个promise，内部执行wx.request代码
+
+   ```js
+   const BASE_URL = "http://localhost:3000/"
+   const REQUEST = (requetUrl,data)=>{
+       return new Promise((res,rej)=>{
+           let url = BASE_URL + requetUrl
+           wx.request({
+               url:url,
+               data:data,
+               method:"GET",
+               dataType:"json",   //返回的数据会有JSON.parse处理
+               success:(data)=>{
+                   res(data.data)
+               },
+               fail:(err)=>{
+                   rej(err)
+               }
+           })
+       })
+   }
+   ```
+
+
+## 获取轮播
+
+/banner
+
+1. 导出一个对象
+
+   - 首页要获取的就是首页的轮播，对应API是/banner
+
+   ```js
+   module.exports = {
+       banner:(data)=>{
+           return REQUEST('banner',data)
+       }
+   }
+   ```
+
+2. 踩了一个坑
+
+   - BASE_URL + url打印出来是正常的
+
+   ```js
+   return new Promise((res,rej)=>{
+           let url = BASE_URL + url
+           console.log(url)    //此处的url是undefind，形参不能和let声明的变量相同，具体原因，有时间深入研究
+           wx.request({
+               url:url,
+               data:data,
+               method:"GET",
+               dataType:"json",
+               success:(data)=>{
+                   res(data.data)
+               },
+               fail:(err)=>{
+                   rej(err)
+               }
+           })
+       })
+   ```
+
+
+1. 此时回到index.js，声明一个变量，banner，存放请求到的海报url
+
+   ```
+   data: {
+       banner:[]
+     }
+   ```
+
+2. 在顶部引入api.js文件
+
+   ``` js
+   var api = require('../../utils/api.js')
+   ```
+
+3. 在onload声明周期中调用获取banner的API
+
+   ```js
+   onLoad: function (options) {
+       api.banner().then(res=>{
+           this.setData({
+               banner:res.banners
+           })
+       }).catch(err=>{
+           console.log(err)
+       })
+   }
+   ```
+
+4. 在index.html中wx：for渲染
+
+   ```html
+   <swiper-item wx:for="{{banner}}" wx:key="{{index}}">
+   	<image mode="aspectFill" src="{{item.imageUrl}}"></image>
+   </swiper-item>
+   ```
+
+
+
+## 获取推荐歌单
+
+/personalized
+
+截取部分示例
+
+```json
+ "hasTaste": false,
+    "code": 200,
+    "category": 0,
+    "result": [
+        {
+            "id": 2864076078,
+            "type": 0,
+            "name": "温柔的晚风和音乐，一定能吹散许多不愉快吧",
+            "copywriter": "编辑推荐：愿一切为之努力的事情都会有一个比想象中还要再好些",
+            "picUrl": "https://p2.music.126.net/IZLxSLFZNMWpe4qfQcT4wA==/109951164193824137.jpg",
+            "canDislike": false,
+            "playCount": 2583355.5,
+            "trackCount": 49,
+            "highQuality": false,
+            "alg": "featured"
+        },
+```
+
+接下来
+
+声明一个数组personalized，用来存放推荐歌单
+
+同样在onload中调用api，因为推荐歌单只有6个位置，返回的数据很多，这里我采用截取前面6个，也可以随机获取6个
+
+```js
+//获取推荐歌单
+api.personalized().then(res=>{
+    this.setData({
+        personalized:res.result.splice(0,6)  //截取前面6个
+    })
+    console.log(this.data.personalized)
+    }).catch(err=>{
+        console.log(err)
+    })
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,18 +1,30 @@
-// pages/index/index.js
+var api = require('../../utils/api.js')
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    banner:[],
+    personalized:[]
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //获取轮播图
+    api.banner().then(res=>{
+      this.setData({
+        banner:res.banners
+      })
+    }).catch(err=>{
+      console.log(err)
+    })
+    //获取推荐歌单
+    api.personalized().then(res=>{
+      this.setData({
+        personalized:res.result.splice(0,6)
+      })
+      console.log(this.data.personalized)
+    }).catch(err=>{
+      console.log(err)
+    })
   },
 
   /**

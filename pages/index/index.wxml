@@ -8,36 +8,15 @@
     <!-- 轮播 -->
     <view class="lunboCaontainer">
         <swiper autoplay indicator-dots interval="1000">
-            <swiper-item class="" item-id="">
-                <image mode="aspectFill" class="" src="/img/lunbo1.jpg"></image>
-            </swiper-item>
-            <swiper-item class="" item-id="">
-                <image mode="aspectFill" class="" src="/img/lunbo2.jpg"></image>
-            </swiper-item>
-            <swiper-item class="" item-id="">
-                <image mode="aspectFill" class="" src="/img/lunbo3.jpg"></image>
-            </swiper-item>
-            <swiper-item class="" item-id="">
-                <image mode="aspectFill" class="" src="/img/lunbo4.jpg"></image>
-            </swiper-item>
-            <swiper-item class="" item-id="">
-                <image mode="aspectFill" class="" src="/img/lunbo5.jpg"></image>
-            </swiper-item>
-            <swiper-item class="" item-id="">
-                <image mode="aspectFill" class="" src="/img/lunbo6.jpg"></image>
-            </swiper-item>
-            <swiper-item class="" item-id="">
-                <image mode="aspectFill" class="" src="/img/lunbo7.jpg"></image>
-            </swiper-item>
-            <swiper-item class="" item-id="">
-                <image mode="aspectFill" class="" src="/img/lunbo8.jpg"></image>
+            <swiper-item class="" item-id="" wx:for="{{banner}}" wx:key="{{index}}">
+                <image mode="aspectFill" class="" src="{{item.imageUrl}}"></image>
             </swiper-item>
         </swiper>
     </view>
     <!-- 分类 -->  
     <view class="categrory">
         <view>
-            <image src="/img/tuijian.png"></image><text>每日推荐</text>
+            <image src="/img/tuijian.png" bindtap="aaaa"></image><text>每日推荐</text>
         </view>
         <view>
             <image src="/img/gedan.png"></image><text>歌单</text>
@@ -64,58 +43,13 @@
         <!-- 歌单大容器 -->
         <view class="container">
             <!-- 歌单 -->
-            <view class="song">
+            <view class="song" wx:for="{{personalized}}" wx:key="{{index}}">
                 <!-- 右上角播放量 -->
                 <view class="Amount">
-                    <text>▷166万</text>
+                    <text>▷{{item.playCount}}</text>
                 </view>
-                <image class="img" src="/img/songList1.jpg" />
-                <text class="text">小众英文歌歌单！却意外的好听</text>
-            </view>
-            <!-- 歌单 -->
-            <view class="song">
-                <!-- 右上角播放量 -->
-                <view class="Amount">
-                    <text>▷166万</text>
-                </view>
-                <image class="img" src="/img/songList2.jpg" />
-                <text class="text">凉城夏日＆在盛夏里，饮一杯清凉纯音水</text>
-            </view>
-            <!-- 歌单 -->
-            <view class="song">
-                <!-- 右上角播放量 -->
-                <view class="Amount">
-                    <text>▷166万</text>
-                </view>
-                <image class="img" src="/img/songList3.jpg" />
-                <text class="text">心怀明朗，温柔就会自动靠近</text>
-            </view>
-            <!-- 歌单 -->
-            <view class="song">
-                <!-- 右上角播放量 -->
-                <view class="Amount">
-                    <text>▷166万</text>
-                </view>
-                <image class="img" src="/img/songList4.jpg" />
-                <text class="text">直抵心灵深处的欧美伤感女嗓</text>
-            </view>
-            <!-- 歌单 -->
-            <view class="song">
-                <!-- 右上角播放量 -->
-                <view class="Amount">
-                    <text>▷166万</text>
-                </view>
-                <image class="img" src="/img/songList5.jpg" />
-                <text class="text">国内各大酒吧热播单曲</text>
-            </view>
-            <!-- 歌单 -->
-            <view class="song">
-                <!-- 右上角播放量 -->
-                <view class="Amount">
-                    <text>▷166万</text>
-                </view>
-                <image class="img" src="/img/songList6.jpg" />
-                <text class="text">空灵民谣 | 游走于冰点的旷久孤寂</text>
+                <image class="img" src="{{item.picUrl}}" />
+                <text class="text">{{item.name}}</text>
             </view>
         </view>
     </view>
