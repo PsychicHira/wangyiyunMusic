@@ -3,7 +3,6 @@
     "pages/guide/guide",
     "pages/index/index",
     "components/search/search",
-    
     "components/cloudCountry/cloudCountry",
     "pages/logs/logs",
     "pages/video/video",
