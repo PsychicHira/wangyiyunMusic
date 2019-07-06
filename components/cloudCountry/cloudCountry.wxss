@@ -1,6 +1,7 @@
 /* currentLine */
 .currentLine{
     height: 10rpx;
+    margin: -2%;
     background-color:#f8f8f8;
 }
 .cloudCountry-container{

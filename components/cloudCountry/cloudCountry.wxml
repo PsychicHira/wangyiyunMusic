@@ -1,20 +1,20 @@
-<template name="cloudCountry">
+<!-- <template name="cloudCountry"> -->
     
     <!-- neirong -->
-    <view class="cloudCountry-container">
+    <view class="cloudCountry-container" wx:for="{{personalizedMv}}" wx:key="index">
         
         <!-- 描述 -->
-        <view class="cloudCountry-description">
-            <text>薛之谦最新单曲《木偶人》 </text>
+        <view class="cloudCountry-description" bindtap="aaa">
+            <text>{{item.name}}{{item.aaaaaa}}</text>
         </view>
         <!-- 视频区域 -->
         <view class="cloudCountry-video">
             <!-- 视频 -->
-            <video src=""></video>
+            <video src="{{item.url}}" data-index="{{index}}" poster="{{item.picUrl}}" bindplay="getMvUrl"></video>
             <!-- 文字 -->
             <view class="textContent">
                 <!-- title -->
-                <text>如果交出真心就能成为不受伤的木偶人 是...</text>
+                <text>{{item.copywriter}}</text>
                 <!-- avatar -->
                 <image src="/img/avatar1.png"/>
             </view>
@@ -24,9 +24,9 @@
             <!-- 点赞 评论 -->
             <view class="like">
                 <image src="/img/dianzan.png" />
-                <text>51</text>
+                <text>{{item.playCount}}</text>
                 <image src="/img/comments.png" />
-                <text>9</text>
+                <text>{{item.playCount}}</text>
             </view>
             <!-- 更多 -->
             <view class="more">
@@ -34,7 +34,7 @@
             </view>
         </view>
         <!-- 分隔条 -->
-    
-    </view>
     <view class="currentLine"></view>
-</template>
+    </view>
+    
+<!-- </template> -->

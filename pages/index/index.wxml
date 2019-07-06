@@ -94,6 +94,7 @@
                 <text class="right">获取新内容</text>
             </view>
         </view>
-        <template is="cloudCountry"></template>
+        <!-- <template is="cloudCountry"></template> -->
+        <cloudCountry personalizedMv="{{personalizedMv}}" mvUrl="{{mvUrl}}"></cloudCountry>
     </view>
 </view>

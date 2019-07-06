@@ -137,7 +137,7 @@
 /* yuncun */
 .cloudCountry-title{
     border-bottom: 2rpx solid #e6e6e6;
-    padding:30rpx 0;
+    padding:30rpx;
     margin-bottom: 30rpx;
     display: flex;
     justify-content: space-between

@@ -23,5 +23,11 @@ module.exports = {
     },
     personalized:(data)=>{
         return REQUEST('personalized',data)
+    },
+    personalizedMv:(data)=>{
+        return REQUEST('personalized/mv',data)
+    },
+    getMvUrl:(data)=>{
+        return REQUEST('mv/url',data)
     }
 }
