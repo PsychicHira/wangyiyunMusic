@@ -1,9 +1,8 @@
 持续更新中...
-#### 原版App截图如下
-![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/index.jpg)
 
-#### 小程序gif首页效果图如下（网速影响可能会加载过慢）
-![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/index.GIF)
+#### 原版App截图如下
+
+![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/index.jpg)
 
 #### 接口文档：
 
@@ -331,6 +330,69 @@ api.personalized().then(res=>{
 }
 ```
 
+### 右上角播放量过滤
+
+![1562501291070](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\1562501291070.png)
+
+播放量是再wx:for循环得来的
+
+```html
+<text>▷{{item.playCount}}万</text>
+```
+
+**重要知识点**，经过踩坑，这里是不支持运行复杂函数，只支持简单的运算，比如
+
+```html
+//可运行，支持加减乘除
+<text>▷{{item.playCount/1000}}万</text>
+```
+
+```
+//不可执行，不支持复杂函数
+<text>▷{{Math.ceil(item.playCount/1000)}}万</text>
+```
+
+查文档，搜资料，发现小程序没有vue中的filter。
+
+碰见坑了，想到之前认真过文档的时候，看到过wxs，wxs是可以写在任何文件中的，wxml文件也不例外，那么用wxs试一试
+
+新建一个小程序
+
+- index.js中声明一个变量
+
+```
+data: {
+    num: 10.456456456
+  }
+```
+
+- index.wxml中绑定num
+
+```
+<text>{{num)}}</text>
+```
+
+- index.wxml中创建一个wxs标签
+
+```html
+<wxs module="ceil">
+    var ceil = function(num){
+    return Math.ceil(num/10000)
+    }
+    module.exports = {
+    ceil : ceil
+    }
+</wxs>
+```
+
+- 再处理一下num标签
+
+```
+<text>▷{{ceil.ceil(item.playCount)}}万</text>
+```
+
+至此解决filter过滤数据问题
+
 ## 获取推荐mv（云村精选）
 
 由于API不是很全，云村精选的地方用“推荐mv”接口
@@ -548,7 +610,46 @@ api.personalized().then(res=>{
      }
    ```
 
-9. 1
+
+
+在video标签中给封面加上预览图，数据从推荐mv数组（personalizedMv）中取
+
+## 新歌/新碟
+
+原版预览
+
+![1562498184718](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\1562498184718.png)
+
+![1562498224579](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\1562498224579.png)
+
+思路
+
+1. 使用wx:if切换，绑定newSongFlag，初始设为true
+
+2. 新碟容器中，给新碟tex加class，新歌不加，字体加粗；新歌容器中，给新歌加class，新碟不加，字体加粗。
+
+3. 新碟容器中给新歌增加点击事件；新歌容器中给新蝶增加点击事件
+
+   ```js
+     //切换到新碟
+     toDisc:function(){
+       this.setData({
+         newSongFlag : true
+       })
+     },
+     //切换到新歌
+     toSong:function(){
+       console.log(2)
+       this.setData({
+         newSongFlag : false
+       })
+     }
+   ```
+
+
+
+
+
 
 
 

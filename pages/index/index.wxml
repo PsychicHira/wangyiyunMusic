@@ -46,7 +46,16 @@
             <view class="song" wx:for="{{personalized}}" wx:key="{{index}}">
                 <!-- 右上角播放量 -->
                 <view class="Amount">
-                    <text>▷{{item.playCount}}</text>
+                    <wxs module="ceil">
+                        var ceil = function(num){
+                            return Math.ceil(num/10000)
+                        }
+                        module.exports = {
+                            ceil : ceil
+                        }
+                    </wxs>
+                    <text>▷{{ceil.ceil(item.playCount)}}万</text>
+                    <!-- <text>▷{{item.playCount}}万</text> -->
                 </view>
                 <image class="img" src="{{item.picUrl}}" />
                 <text class="text">{{item.name}}</text>
@@ -54,10 +63,15 @@
         </view>
     </view>
     <!-- 新碟新歌 -->
-    <view class="newSong">
+    <!-- 新碟 -->
+    <view class="newSong" wx:if="{{newSongFlag}}">
         <!-- 标题 -->
         <view class="title">
-            <text class="left">新碟 | 新歌</text>
+            <view class="left">
+                <text class="disc">新碟</text>
+                <text>|</text>
+                <text bindtap="toSong"> 新歌</text>
+            </view>
             <text class="right">更多新碟</text>
         </view>
         <!-- 歌单大容器 -->
@@ -82,6 +96,39 @@
             </view>
         </view>
     </view>   
+    <!-- 新歌 -->
+    <view class="newSong"  wx:else>
+        <!-- 标题 -->
+        <view class="title">
+            <view class="left">
+                <text bindtap="toDisc">新碟 </text>
+                <text>|</text>
+                <text class="song"> 新歌</text>
+            </view>
+            <text class="right">新歌推荐</text>
+        </view>
+        <!-- 歌单大容器 -->
+        <view class="container">
+            <!-- 单曲 -->
+            <view class="song">
+                <image class="img" src="/img/newSong1.jpg" />
+                <text class="text">You Need To Calm Down</text>
+                <text class="name">Taylor Swift</text>
+            </view>
+            <!-- 单曲 -->
+            <view class="song">
+                <image class="img" src="/img/newSong2.jpg" />
+                <text class="text">Maps</text>
+                <text class="name">Far East Movement</text>
+            </view>
+            <!-- 单曲 -->
+            <view class="song">
+                <image class="img" src="/img/newSong3.jpg" />
+                <text class="text">Fly Now！敢傻就飞！</text>
+                <text class="name">卢广仲</text>
+            </view>
+        </view>
+    </view>  
     <!-- 粗分隔条 -->
     <view class="currentLine"></view>
     <!-- 云村精选 -->

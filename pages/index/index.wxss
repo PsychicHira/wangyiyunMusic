@@ -92,6 +92,7 @@
     -webkit-line-clamp:2; 
 }
 /* 新碟新歌 */
+/* 新碟 */
 .newSong{
     margin: 60rpx 0 30rpx 0;
 }
@@ -109,6 +110,16 @@
 .newSong .container .img{
     width: 215rpx;
     height: 215rpx;
+}
+.newSong .title .left{
+    display: flex;
+}
+.newSong .title .left text{
+    margin-right: 20rpx
+}
+.newSong .title .disc , .newSong .title .song{
+    font-weight: bold;
+    font-size: 30rpx;
 }
 .newSong .title .right{
     font-size: 27rpx;
@@ -144,7 +155,7 @@
 }
 .cloudCountry-title .left,.cloudCountry-title .right{
     font-weight: bold;
-    font-size: 35rpx;
+    font-size: 27rpx;
 }
 .cloudCountry-title image{
     width: 30rpx;
