@@ -79,7 +79,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 在app.json中设置
 
-```json
+```js
   "tabBar": {
       //tabBar上方的border-top颜色
     "borderStyle":"white",
@@ -293,7 +293,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 截取部分示例
 
-```json
+```js
  "hasTaste": false,
     "code": 200,
     "category": 0,
@@ -341,7 +341,7 @@ api.personalized().then(res=>{
 
 2. cloudCountry.json
 
-   ```json
+   ```js
    {
      "component": true,
      "usingComponents": {}
@@ -350,7 +350,7 @@ api.personalized().then(res=>{
 
 3. index.json
 
-   ```json
+   ```js
    {
      "usingComponents": {
        "cloudCountry":"/components/cloudCountry/cloudCountry"
@@ -386,7 +386,7 @@ api.personalized().then(res=>{
 
    api.js中增加请求
 
-   ```json
+   ```js
    //获取推荐mv
    personalizedMv:(data)=>{
            return REQUEST('personalized/mv',data)
@@ -416,7 +416,7 @@ api.personalized().then(res=>{
 
    cloudCountry.js接受值
 
-   ```json
+   ```js
      properties: {
        personalizedMv:{
          type:Array,
@@ -454,7 +454,7 @@ api.personalized().then(res=>{
 
 2. 在api.js中添加请求mvUrl的方法
 
-   ```json
+   ```js
    getMvUrl:(data)=>{
            return REQUEST('mv/url',data)
        }
@@ -462,7 +462,7 @@ api.personalized().then(res=>{
 
 3. 找到请求推荐mv的请求处，在成功的回调里面，
 
-   ```json
+   ```js
    //获取推荐mv（云村精选）
    api.personalizedMv().then(res=>{
    	this.setData({
@@ -507,7 +507,7 @@ api.personalized().then(res=>{
 
 6. 子组件接收
 
-   ```json
+   ```js
      properties: {
        personalizedMv:{
          type:Array,
@@ -528,7 +528,7 @@ api.personalized().then(res=>{
 
 8. getMvUrl方法
 
-   ```json
+   ```js
      methods: {
          //e可以获取到index，
        getMvUrl:function(e){
@@ -552,4 +552,3 @@ api.personalized().then(res=>{
 
 
 
-1. 
