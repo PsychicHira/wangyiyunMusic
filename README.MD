@@ -331,15 +331,225 @@ api.personalized().then(res=>{
 }
 ```
 
+## 获取推荐mv（云村精选）
+
+由于API不是很全，云村精选的地方用“推荐mv”接口
+
+修改组件的调用，之前云村组件使用template方式引入，现在要改成Component的方式，原因是首页要给子组件传递数据：推荐mv的数据。子组件用来渲染页面。
+
+1. 把组件cloudCountry.wxml中的外层template去掉
+
+2. cloudCountry.json
+
+   ```json
+   {
+     "component": true,
+     "usingComponents": {}
+   }
+   ```
+
+3. index.json
+
+   ```json
+   {
+     "usingComponents": {
+       "cloudCountry":"/components/cloudCountry/cloudCountry"
+     }
+   }
+   ```
+
+4. index.wsml
+
+   ```html
+   <template is="cloudCountry"></template>
+   改为
+   <cloudCountry></cloudCountry>
+   ```
+
+中间的过程遇到了坑：
+
+- 就是子组件中的生命周期问题。子组件的声明周期不如page灵活，子组件的声明周期如下
+  1. created 组件实例化，但节点树还未导入，因此**这时不能用setData**
+  2. attached 节点树完成，可以用setData渲染节点，但无法操作节点
+  3. ready 组件布局完成，这时可以获取节点信息，也可以操作节点
+  4. moved 组件实例被移动到树的另一个位置
+  5. detached 组件实例从节点树中移除
+- 通过手动测试了一遍声明周期，有一点很重要，就是**子组件不能完成初始化的数据操作渲染标签，只能通过父组件给数据拿来渲染**
 
 
 
+### 获取mv信息
+
+1. 获取推荐mv数组给子组件
+
+2. 子组件可以拿来渲染标签
+
+   api.js中增加请求
+
+   ```json
+   //获取推荐mv
+   personalizedMv:(data)=>{
+           return REQUEST('personalized/mv',data)
+       }
+   ```
+
+   index.js
+
+   ```js
+   //data中声明变量
+   personalized:[]
+   //生命周期onload获取推荐歌单
+   api.personalized().then(res=>{
+     this.setData({
+       personalized:res.result
+     })
+   }).catch(err=>{
+     console.log(err)
+   })
+   ```
+
+   index.wxml给云村子组件传值
+
+   ```html
+   <cloudCountry personalizedMv="{{personalizedMv}}"></cloudCountry>
+   ```
+
+   cloudCountry.js接受值
+
+   ```json
+     properties: {
+       personalizedMv:{
+         type:Array,
+         value:'default value'
+       }
+     }
+   ```
+
+   cloudCountry.wxml中渲染数据没啥说的
+
+那么这时候问题来了，这个推荐mv的接口中，居然没有mv的地址，想办法解决吧
+
+### 获取mv地址
+
+有两种思路
+
+- 第一种：
+
+  父组件也就是index.js，拿到mvUrl，把这个数组传递给子组件，当子组件的视频播放按钮发生点击的时候，触发事件：给personalizedMv（mv数据）增加一个新属性url。
+
+- 第二种
+
+  在子组件attached生命周期中发送请求，把mv地址setData进personalizedMv
+
+> **有一个重要知识点，this.data.xxx只能临时改变值，不能双向绑定，只有通过this.setData可以实时双向绑定
+
+采用第一种方法
+
+1. 在index.js声明2个变量，从personalizedMv遍历获取mv的标识id，根据id发送请求获取到此mv的url
+
+   ```
+   mvId:[],
+   mvUrl:[]
+   ```
+
+2. 在api.js中添加请求mvUrl的方法
+
+   ```json
+   getMvUrl:(data)=>{
+           return REQUEST('mv/url',data)
+       }
+   ```
+
+3. 找到请求推荐mv的请求处，在成功的回调里面，
+
+   ```json
+   //获取推荐mv（云村精选）
+   api.personalizedMv().then(res=>{
+   	this.setData({
+   	personalizedMv:res.result.splice(0,6)
+       })
+       //在此处刚拿到personalizedMv，通过遍历获取mvId
+       this.data.personalizedMv.forEach(element => {
+       this.data.mvId.push(element.id)
+       })
+   })
+   ```
+
+4. 在上面的promise拿到mvId后，紧接着.then发送请求，获取到mvUrl
+
+   ```js 
+   // 获取mvUrl
+   .then(()=>{     
+       //声明一个数组
+         let arr=[]
+         // 遍历mvid，发送请求，得到url，
+           this.data.mvId.forEach((element,index) => {
+             api.getMvUrl({id:element}).then(res=>{
+               arr.push(res.data.url)
+                 //把url存进数组
+               this.setData({
+                 mvUrl:arr
+               })
+             }).catch(err=>{
+               console.log(err)
+             })
+           })
+       }).catch(err=>{
+         console.log(err)
+       })
+   ```
+
+5. 在index.wxml中，给子组件传值
+
+   ```html
+   <cloudCountry personalizedMv="{{personalizedMv}}" mvUrl="{{mvUrl}}"></cloudCountry>
+   ```
+
+6. 子组件接收
+
+   ```json
+     properties: {
+       personalizedMv:{
+         type:Array,
+         value:'default value'
+       },
+       mvUrl:{
+         type:Array,
+         value:'default value'
+       }
+     }
+   ```
+
+7. 在子组件中，给video绑定点击播放触发的方法：getMvUrl
+
+   ```html
+   <video src="{{item.url}}" data-index="{{index}}" poster="{{item.picUrl}}" bindplay="getMvUrl"></video>
+   ```
+
+8. getMvUrl方法
+
+   ```json
+     methods: {
+         //e可以获取到index，
+       getMvUrl:function(e){
+           //新声明数组
+         let arr=[]
+         //把personalizedMv数据给arr
+         arr = this.data.personalizedMv
+           //声明一个index，用来记录用户点击的是哪一个mv的key
+         let index = e.currentTarget.dataset.index
+         //给第index个arr增加url，增加的url就从mvUrl第index个获得
+         arr[index].url = this.data.mvUrl[index]
+           //把personalizedMv用arr覆盖一下，完成
+         this.setData({
+           personalizedMv:arr
+         })
+       }
+     }
+   ```
+
+9. 1
 
 
 
-
-
-
-
-
-
+1. 

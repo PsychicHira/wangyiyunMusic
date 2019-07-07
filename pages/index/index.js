@@ -45,18 +45,14 @@ Page({
         
     }).then(()=>{
       // 获取mvUrl
-      //   遍历id，发送请求，把url存进数组
+        // 遍历id，发送请求，把url存进数组
       let arr=[]
         this.data.mvId.forEach((element,index) => {
-          // console.log(element)
           api.getMvUrl({id:element}).then(res=>{
             arr.push(res.data.url)
             this.setData({
               mvUrl:arr
             })
-            // console.log(this.data.personalizedMv[index].url)
-            // this.data.personalizedMv[`${index}`].url=res.data.url
-            // console.log(res.data.url)
           }).catch(err=>{
             console.log(err)
           })
@@ -88,7 +84,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.data.personalizedMv[0].aaaaaa = 9999999999999999999
+    
     // console.log(this.data.personalizedMv[0]);
     
   },

@@ -28,15 +28,13 @@ Component({
    */
   methods: {
     getMvUrl:function(e){
-      let obj=[]
-      obj = this.data.personalizedMv
+      let arr=[]
+      arr = this.data.personalizedMv
       let index = e.currentTarget.dataset.index
-      obj[index].url = this.data.mvUrl[index]
+      arr[index].url = this.data.mvUrl[index]
       this.setData({
-        personalizedMv:obj
+        personalizedMv:arr
       })
-      // this.data.personalizedMv[0].url = this.data.mvUrl[e.currentTarget.dataset.index]
-      // console.log(this.data.personalizedMv)
     }
   },
   //组件生命周期函数-在组件实例进入页面节点树时执行)

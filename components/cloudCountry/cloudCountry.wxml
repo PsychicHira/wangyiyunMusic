@@ -15,8 +15,8 @@
             <view class="textContent">
                 <!-- title -->
                 <text>{{item.copywriter}}</text>
-                <!-- avatar -->
-                <image src="/img/avatar1.png"/>
+                <!-- avatar  接口没有相关头像，所以注掉 -->
+                <!-- <image src="/img/avatar1.png"/> -->
             </view>
         </view>
         <!-- 互动区域 -->
