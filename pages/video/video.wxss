@@ -1,4 +1,5 @@
 @import '../../components/search/search.wxss';
 .nav{
-    float: left;
+    white-space: nowrap;
+    border-bottom: 1rpx solid #f2f4f0
 }

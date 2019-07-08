@@ -6,16 +6,16 @@
     </view>
     <!-- 滑动导航 -->
     <scroll-view class="nav" scroll-x="ture" style="height:60rpx">
-        <view>推荐</view>
-        <view>LOOK直播</view>
-        <view>音乐画像</view>
-        <view>什么夏入</view>
-        <view>现场</view>
-        <view>翻唱</view>
-        <view>广场</view>
-        <view>MV</view>
-        <view>舞蹈</view>
-        <view>ACG音乐</view>
+        <text>推荐</text>
+        <text>LOOK直播</text>
+        <text>音乐画像</text>
+        <text>什么夏入</text>
+        <text>现场</text>
+        <text>翻唱</text>
+        <text>广场</text>
+        <text>MV</text>
+        <text>舞蹈</text>
+        <text>ACG音乐</text>
     </scroll-view>
     <scroll-view scroll-y style="height: 200rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
             <view id="green" class="scroll-view-item bc_green"></view>
