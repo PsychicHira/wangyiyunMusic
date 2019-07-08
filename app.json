@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/video/video",
     "pages/index/index",
     "pages/guide/guide",
     
     "components/search/search",
     "components/cloudCountry/cloudCountry",
     "pages/logs/logs",
-    "pages/video/video",
+    
     "pages/mine/mine",
     "pages/friend/friend",
     "pages/account/account"

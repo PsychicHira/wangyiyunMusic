@@ -1,2 +1,27 @@
-<!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<import is="search" src="../../components/search/search.wxml" />
+<view>
+    <!-- 搜索 -->
+    <view >
+        <template is="search"></template>
+    </view>
+    <!-- 滑动导航 -->
+    <scroll-view class="nav" scroll-x="ture" style="height:60rpx">
+        <view>推荐</view>
+        <view>LOOK直播</view>
+        <view>音乐画像</view>
+        <view>什么夏入</view>
+        <view>现场</view>
+        <view>翻唱</view>
+        <view>广场</view>
+        <view>MV</view>
+        <view>舞蹈</view>
+        <view>ACG音乐</view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: 200rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <view id="green" class="scroll-view-item bc_green"></view>
+            <view id="red"  class="scroll-view-item bc_red"></view>
+            <view id="yellow" class="scroll-view-item bc_yellow"></view>
+            <view id="blue" class="scroll-view-item bc_blue"></view>
+          </scroll-view>
+    
+</view>

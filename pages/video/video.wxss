@@ -1,1 +1,4 @@
-/* pages/video/video.wxss */
+@import '../../components/search/search.wxss';
+.nav{
+    float: left;
+}
