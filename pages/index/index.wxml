@@ -16,7 +16,7 @@
     <!-- 分类 -->  
     <view class="categrory">
         <view>
-            <image src="/img/tuijian.png" bindtap="aaaa"></image><text>每日推荐</text>
+            <image src="/img/tuijian.png"></image><text>每日推荐</text>
         </view>
         <view>
             <image src="/img/gedan.png"></image><text>歌单</text>
@@ -77,22 +77,10 @@
         <!-- 歌单大容器 -->
         <view class="container">
             <!-- 单曲 -->
-            <view class="song">
-                <image class="img" src="/img/newSong1.jpg" />
-                <text class="text">You Need To Calm Down</text>
-                <text class="name">Taylor Swift</text>
-            </view>
-            <!-- 单曲 -->
-            <view class="song">
-                <image class="img" src="/img/newSong2.jpg" />
-                <text class="text">Maps</text>
-                <text class="name">Far East Movement</text>
-            </view>
-            <!-- 单曲 -->
-            <view class="song">
-                <image class="img" src="/img/newSong3.jpg" />
-                <text class="text">Fly Now！敢傻就飞！</text>
-                <text class="name">卢广仲</text>
+            <view class="song" wx:for="{{newDisc}}" wx:key="{{index}}">
+                <image class="img" src="{{item.picUrl}}"/>
+                <text class="text">{{item.name}}</text>
+                <text class="name">{{item.artist.name}}</text>
             </view>
         </view>
     </view>   
@@ -110,22 +98,10 @@
         <!-- 歌单大容器 -->
         <view class="container">
             <!-- 单曲 -->
-            <view class="song">
-                <image class="img" src="/img/newSong1.jpg" />
-                <text class="text">You Need To Calm Down</text>
-                <text class="name">Taylor Swift</text>
-            </view>
-            <!-- 单曲 -->
-            <view class="song">
-                <image class="img" src="/img/newSong2.jpg" />
-                <text class="text">Maps</text>
-                <text class="name">Far East Movement</text>
-            </view>
-            <!-- 单曲 -->
-            <view class="song">
-                <image class="img" src="/img/newSong3.jpg" />
-                <text class="text">Fly Now！敢傻就飞！</text>
-                <text class="name">卢广仲</text>
+            <view class="song" wx:for="{{newSong}}" wx:key="{{index}}">
+                <image class="img" src="{{item.album.picUrl}}"/>
+                <text class="text">{{item.name}}</text>
+                <text class="name">{{item.artist.name}}</text>
             </view>
         </view>
     </view>  

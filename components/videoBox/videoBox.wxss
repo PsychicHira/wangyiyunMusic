@@ -1,0 +1,50 @@
+/* currentLine */
+.currentLine{
+    height: 10rpx;
+    margin: -2%;
+    background-color:#f8f8f8;
+}
+.videoBox-container{
+    margin: 30rpx 2%;
+}
+.videoBox-video{
+    border-radius: 25rpx;
+    /* overflow: hidden来切掉多出去的部分 */
+    overflow: hidden;
+}
+.videoBox-video video{
+    width: 100%;
+}
+.videoBox-video .textContent{
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    font-weight: bold;
+}
+.videoBox-video .textContent image{
+    height: 60rpx;
+    width: 60rpx;
+    border-radius: 50%;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+.videoBox-interaction{
+    height: 90rpx;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    /* flex布局，blick垂直居中的关键 */
+    align-items: center;
+    padding: 0 20rpx;
+    border-top: 1rpx solid #f2f4f0;
+}
+.videoBox-interaction text{
+    margin: 0 50rpx 0 20rpx;
+}
+.videoBox-interaction image{
+    height: 30rpx;
+    width: 30rpx;
+}

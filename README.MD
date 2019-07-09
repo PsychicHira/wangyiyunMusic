@@ -1,12 +1,14 @@
 持续更新中...
 
+# 前言
+
+这是一篇非常详实的笔记，从创建项目开始，中间的每个环节，每个思路，哪里碰到的坑，如何用技巧、逻辑去填平，事无巨细都一一记下来，从接触前端到现在，已有4年的时间，大量的知识技术不可能全部存在脑子里，只有通过文字的记录来弥补不可靠的记忆，而且我发现，记录的越多，在日后的项目中会犯错的越少，这都归于笔记的力量。
+
+某天看到论坛有一个链接：有人通过跨域伪造请求头，发布了node.js版有道云音乐的官方API。于是想，利用这些API，用微信小程序99%原汁原味还原一下吧，一方面调高项目能力，一方面也能为找工作多增加一些竞争力。
+
 #### 原版App截图如下
 
 ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/index.jpg)
-
-#### 接口文档：
-
-https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 # 创建项目
 
@@ -141,13 +143,11 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
   ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/4.png)
 
-# 搜索框组件
-
 # 搜索框组件和云村精选组件
 
 在根目录新建文件夹components存放组件用，新建search文件夹，按照原版写样式，没什么好说的。
 
-云村精选同。
+云村精选同，新建cloudCountry文件夹。
 
 将组件引用至index中(这里要会小程序的组件使用)
 
@@ -160,7 +160,11 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 到此首页静态页面完毕，下面开始动态获取数据
 
-# 网易云音乐后台
+# 网易云音乐后端
+
+#### 接口文档：
+
+https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 1. 安装
 

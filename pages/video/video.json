@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    
+    "videoBox":"/components/videoBox/videoBox"
   }
 }

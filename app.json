@@ -2,6 +2,7 @@
   "pages": [
     "pages/video/video",
     "pages/index/index",
+    
     "pages/guide/guide",
     
     "components/search/search",
@@ -20,7 +21,7 @@
   },
   "tabBar": {
     "borderStyle":"white",
-    "backgroundColor":"f2f4f0",
+    "backgroundColor":"#f2f4f0",
     "color":"#838a87",
     "selectedColor":"#ff5043",
     "list": [

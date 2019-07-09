@@ -1,5 +1,13 @@
 @import '../../components/search/search.wxss';
+@import '../../components/videoBox/videoBox.wxss';
 .nav{
     white-space: nowrap;
-    border-bottom: 1rpx solid #f2f4f0
+    border-bottom: 1rpx solid #f2f4f0;
+    height: 60rpx;
+}
+.nav text{
+    margin: 20rpx 36rpx;
+    line-height: 60rpx;
+    font-size: 27rpx;
+    font-weight: bold;
 }

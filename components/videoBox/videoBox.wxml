@@ -1,0 +1,29 @@
+<view class="videoBox-container">
+    <view class="videoBox-video">
+        <!-- 视频 -->
+        <video src="{{item.url}}" data-index="{{index}}" poster="{{item.picUrl}}" bindplay="getMvUrl"></video>
+        <!-- 文字 -->
+        <view class="textContent">
+            <!-- title -->
+            <text>4564654654654654</text>
+            <!-- avatar  接口没有相关头像，所以注掉 -->
+            <!-- <image src="/img/avatar1.png"/> -->
+        </view>
+    </view>
+    <!-- 互动区域 -->
+    <view class="videoBox-interaction">
+        <!-- 点赞 评论 -->
+        <view class="like">
+            <image src="/img/dianzan.png" />
+            <text>111222</text>
+            <image src="/img/comments.png" />
+            <text>444555</text>
+        </view>
+        <!-- 更多 -->
+        <view class="more">
+            <image src="/img/more.png" />
+        </view>
+    </view>
+    <!-- 分隔条 -->
+<view class="currentLine"></view>
+</view>
