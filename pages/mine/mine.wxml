@@ -1,2 +1,69 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view>
+    <!-- 头部 -->
+    <view class="head">
+          <image src="/img/yun.png" />
+          <text>我的音乐</text>
+          <image src="/img/playing1.png" />
+    </view>
+    <!-- 导航 -->
+    <view class="nav">
+        <scroll-view scroll-x>
+            <view>
+                <image src="/img/sirenFM.png" />
+                <text>私人FM</text>
+            </view>
+            <view>
+                <image src="/img/zuixindianyin.png" />
+                <text>最新电音</text>
+            </view>
+            <view>
+                <image src="/img/Satikongjian.png" />
+                <text>Sati空间</text>
+            </view>
+            <view>
+                <image src="/img/sicangtuijian.png" />
+                <text>私藏推荐</text>
+            </view>
+            <view>
+                <image src="/img/qinzipindao.png" />
+                <text>亲子频道</text>
+            </view>
+            <view>
+                <image src="/img/gudianzhuanqu.png" />
+                <text>古典专区</text>
+            </view>
+            <view>
+                <image src="/img/paobuFM.png" />
+                <text>跑不FM</text>
+            </view>
+            <view>
+                <image src="/img/xiaobingdiantai.png" />
+                <text>小冰电台</text>
+            </view>
+            <view>
+                <image src="/img/jueshidiantai.png" />
+                <text>爵士电台</text>
+            </view>
+            <view>
+                <image src="/img/jiashimoshi.png" />
+                <text>驾驶模式</text>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 我的音乐 -->
+    <view class="mySong">
+        <!-- 用四个view来布局 -->
+        <view>
+            <view>
+                
+            </view>
+            <view>
+                
+            </view>
+        </view>
+    </view>
+    <!-- 我创建的歌单 -->
+    <view class="myCreatedSongList"></view>
+    <!-- 我收藏的歌单 -->
+    <view class="myCollectSongList"></view>
+</view>

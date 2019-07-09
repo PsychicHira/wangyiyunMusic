@@ -1,1 +1,41 @@
-/* pages/mine/mine.wxss */
+/* 头部 */
+.head{
+    height: 100rpx;
+    /* background-color: red; */
+    margin-bottom:30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20rpx;
+}
+.head image {
+    width: 50rpx;
+    height: 40rpx;
+}
+/* 导航 */
+.nav{
+    height: 150rpx;
+    /* background-color: red; */
+    /* display: flex;
+    flex-direction: row; */
+    white-space: nowrap;
+    align-items: center;
+    border-bottom: 1rpx solid #f2f4f0;
+    box-sizing: border-box
+}
+.nav view{
+    /* display: inline-block; */
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center
+}
+.nav text{
+    font-size: 20rpx;
+    margin-top: 25rpx;
+}
+.nav image{
+    width: 73rpx;
+    height: 74rpx;
+    margin: 0 45rpx;
+}
+/* 我的音乐 */
