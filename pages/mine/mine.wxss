@@ -11,6 +11,11 @@
 .head image {
     width: 50rpx;
     height: 40rpx;
+    vertical-align: bottom
+}
+.head text{
+    font-size: 40rpx;
+    font-weight: 600;
 }
 /* 导航 */
 .nav{
@@ -30,7 +35,7 @@
     align-items: center
 }
 .nav text{
-    font-size: 20rpx;
+    font-size: 24rpx;
     margin-top: 25rpx;
 }
 .nav image{
@@ -39,3 +44,110 @@
     margin: 0 45rpx;
 }
 /* 我的音乐 */
+.mySong{
+    border: 10rpx solid #f8f8f8
+}
+.mySong image{
+    width: 50rpx;
+    height: 50rpx;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%)
+}
+.mySong .row{
+    height: 100rpx;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40rpx;
+}
+.mySong .row .left{
+    width: 150rpx;
+    height: 100rpx;
+}
+.mySong .row .right{
+    width: 600rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #f2f4f0;
+}
+.mySong .row .right text{
+    padding-right: 20rpx;
+}
+/* 我创建的歌单 */
+    /* 2个盒子的标题和歌单排版写在了一起，逗号隔开 / 收藏歌单样式也写在此处 */
+.myCreatedSongList{
+    height: 350rpx;
+    /* background-color: red; */
+    padding: 0 20rpx;
+}
+.myCreatedSongList .title , 
+.myCollectSongList .title{
+    display: flex;
+    justify-content: space-between;
+    height: 100rpx;
+    /* background-color: blue; */
+    align-items: center;
+}
+.myCreatedSongList .title image , 
+.myCollectSongList .title image{
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+}
+.myCreatedSongList .like , 
+.myCreatedSongList .songList , 
+.myCollectSongList .songList{
+    height: 100rpx;
+    margin-bottom: 20rpx;
+}
+.myCreatedSongList .like .left , 
+.myCreatedSongList .songList .left , 
+.myCollectSongList .songList .left{
+    display: flex;
+}
+.myCreatedSongList .like .left .imgBox , 
+.myCreatedSongList .songList .left .imgBox ,
+.myCollectSongList .songList .left .imgBox{
+    width: 100rpx;
+    height: 100rpx;
+}
+.myCreatedSongList .like .left .img , 
+.myCreatedSongList .songList .left .img ,
+.myCollectSongList .songList .left .img{
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+}
+.myCreatedSongList .like .left .mask{
+    width: 100rpx;
+    height: 100rpx;
+    background-color: rgb(0,0,0);
+    opacity: 0.3;
+    position: absolute;
+}
+.myCreatedSongList .like .left .heart{
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+}
+.myCreatedSongList .like .left .textBox , 
+.myCreatedSongList .songList .left .textBox ,
+.myCollectSongList .songList .left .textBox{
+    display: flex;
+    flex-direction: column;
+    justify-items: center
+}
+.myCreatedSongList .like .left .textBox text , 
+.myCreatedSongList .songList .left .textBox text ,
+.myCollectSongList .songList .left .textBox text{
+    line-height: 50rpx;
+    margin-left: 20rpx;
+}
+/* 我收藏的歌单 */
+.myCollectSongList{
+    padding: 0 20rpx;
+}

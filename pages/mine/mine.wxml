@@ -53,17 +53,122 @@
     <!-- 我的音乐 -->
     <view class="mySong">
         <!-- 用四个view来布局 -->
-        <view>
-            <view>
-                
+        <view class="row">
+            <view class="left">
+                <image src="/img/bendiyinyue.png" />
             </view>
-            <view>
-                
+            <view class="right">
+                <text>本地音乐</text>
+                <view>
+                    <text>0</text>
+                    <text>></text>
+                </view>              
+            </view>
+        </view>
+        <view class="row">
+            <view class="left">
+                <image src="/img/zuijinbofang.png" />
+            </view>
+            <view class="right">
+                <text>最近播放</text>
+                <view>
+                    <text>0</text>
+                    <text>></text>
+                </view>              
+            </view>
+        </view>
+        <view class="row">
+            <view class="left">
+                <image src="/img/wodediantai.png" />
+            </view>
+            <view class="right">
+                <text>我的电台</text>
+                <view>
+                    <text>0</text>
+                    <text>></text>
+                </view>              
+            </view>
+        </view>
+        <view class="row">
+            <view class="left">
+                <image src="/img/wodeshoucang.png" />
+            </view>
+            <view class="right">
+                <text>我的收藏</text>
+                <view>
+                    <text>专辑/歌手/视频/专栏</text>
+                    <text>></text>
+                </view>              
             </view>
         </view>
     </view>
     <!-- 我创建的歌单 -->
-    <view class="myCreatedSongList"></view>
+    <view class="myCreatedSongList">
+        <!-- 标题 -->
+        <view class="title">
+            <view class="left">
+                <text>∨</text>
+                <text>我创建的歌单</text>
+                <text>(2)</text>
+            </view>
+            <view class="right">
+                <text>+</text>
+                <image src="/img/more.png" />
+            </view>
+        </view>
+        <!-- 第一行，我喜欢的音乐，系统固定板块 -->
+        <view class="like">
+            <view class="left">
+                <view class="imgBox">
+                    <image class="img" src="/img/SongList.png" />
+                    <view class="mask"></view>
+                    <image class="heart" src="/img/heart.png" />
+                </view>
+                <view class="textBox">
+                    <text class="text">我喜欢的音乐我喜欢的音乐</text>
+                    <text class="count">99首</text>
+                </view>
+            </view>
+            <view class="right"></view>
+        </view>
+        <!-- 第二行，已创建的歌单 -->
+        <view class="songList">
+            <view class="left">
+                <view class="imgBox">
+                    <image class="img" src="/img/SongList.png" />
+                </view>
+                <view class="textBox">
+                    <text class="text">歌单名</text>
+                    <text class="count">30首</text>
+                </view>
+            </view>
+        </view>
+    </view>
     <!-- 我收藏的歌单 -->
-    <view class="myCollectSongList"></view>
+    <view class="myCollectSongList">
+        <!-- 标题 -->
+        <view class="title">
+            <view class="left">
+                <text>∨</text>
+                <text>我收藏的歌单</text>
+                <text>(2)</text>
+            </view>
+            <view class="right">
+                <text>+</text>
+                <image src="/img/more.png" />
+            </view>
+        </view>
+        <!-- 歌单列表 -->
+        <view class="songList">
+            <view class="left">
+                <view class="imgBox">
+                    <image class="img" src="/img/SongList.png" />
+                </view>
+                <view class="textBox">
+                    <text class="text">歌单名</text>
+                    <text class="count">50首,by 创建者</text>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>
