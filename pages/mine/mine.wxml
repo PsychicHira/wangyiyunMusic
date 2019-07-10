@@ -7,7 +7,7 @@
     </view>
     <!-- 导航 -->
     <view class="nav">
-        <scroll-view scroll-x>
+        <scroll-view scroll-x bindscrolltolower="onReachBottom">
             <view>
                 <image src="/img/sirenFM.png" />
                 <text>私人FM</text>

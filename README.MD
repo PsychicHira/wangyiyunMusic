@@ -160,7 +160,7 @@
 
 到此首页静态页面完毕，下面开始动态获取数据
 
-# 网易云音乐后端
+# 后端接口
 
 #### 接口文档：
 
@@ -337,7 +337,7 @@ api.personalized().then(res=>{
 
 ### 右上角播放量过滤
 
-![1562501291070](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\1562501291070.png)
+![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/5.png)
 
 播放量是再wx:for循环得来的
 
@@ -623,9 +623,9 @@ data: {
 
 原版预览
 
-![1562498184718](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\1562498184718.png)
+![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/6.png)
 
-![1562498224579](C:\Users\老刘\AppData\Roaming\Typora\typora-user-images\1562498224579.png)
+![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/7.png)
 
 思路
 
@@ -650,6 +650,89 @@ data: {
        })
      }
    ```
+
+**接口说明**
+
+**接口地址 :** `/top/album`
+
+**可选参数 :** 
+
+- `limit`: 取出数量 , 默认为 50
+- `offset`: 偏移数量 , 用于分页 , 如 :( 页数 -1)*50, 其中 50 为 limit 的值 , 默认 为 0
+
+在api.js中新增请求：
+
+```
+//获取新碟信息
+getNewDisc:(data)=>{
+	return REQUEST('top/album',data)
+}
+
+```
+
+index.js
+
+```
+//声明变量
+newDisc：[]
+
+//获取新碟
+api.getNewDisc({
+	offset:0,
+	limit:3
+    }).then(res=>{
+      this.setData({
+        newDisc:res.albums
+      })
+    })
+  }
+
+```
+
+wx:for渲染标签，没有好说的
+
+**新歌同理，接口说明**
+
+**接口地址 :** `/top/song`
+
+**可选参数 :**
+
+`type`: 地区类型 id,对应以下:
+
+```
+全部:0
+华语:7
+欧美:96
+日本:8
+韩国:16
+
+```
+
+# 视频页
+
+原版截图
+
+![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/8.png)
+
+在video中引入search相关文件
+
+创建videoBox组件
+
+静态文件没什么好说的
+
+# “我的”页面
+
+原版截图
+
+![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/9.png)
+
+首先用ps抠图，得到图标
+
+
+
+
+
+
 
 
 

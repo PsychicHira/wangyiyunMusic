@@ -41,5 +41,9 @@ module.exports = {
     //获取新歌信息
     getNewSong:(data)=>{
         return REQUEST('top/song',data)
+    },
+    //获取最新mv
+    getNewSong:(data)=>{
+        return REQUEST('top/song',data)
     }
 }
