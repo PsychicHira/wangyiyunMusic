@@ -1,7 +1,7 @@
 <view class="videoBox-container" wx:for="{{video}}" wx:key="index">
     <view class="videoBox-video">
         <!-- 视频 -->
-        <video src="" data-index="{{index}}" poster="{{item.cover}}" bindplay="getMvUrl"></video>
+        <video src="{{item.url}}" data-index="{{index}}" poster="{{item.cover}}" bindplay="getMvUrl"></video>
         <!-- 文字 -->
         <view class="textContent">
             <!-- title -->
