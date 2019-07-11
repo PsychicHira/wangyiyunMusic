@@ -1,18 +1,26 @@
-// pages/video/video.js
+var api = require('../../utils/api.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    video:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //获取推荐mv
+    api.getNewSong({
+      limit:10
+    }).then(res=>{
+      this.setData({
+        video:res.data
+      })
+      // console.log(res.data)
+    })
   },
 
   /**

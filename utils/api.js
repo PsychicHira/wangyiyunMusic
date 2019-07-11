@@ -44,6 +44,6 @@ module.exports = {
     },
     //获取最新mv
     getNewSong:(data)=>{
-        return REQUEST('top/song',data)
+        return REQUEST('mv/first',data)
     }
 }

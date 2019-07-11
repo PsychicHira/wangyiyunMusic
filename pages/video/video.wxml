@@ -17,7 +17,7 @@
     </scroll-view>
     <!-- 视频 -->
     <view>
-        <videoBox></videoBox>
+        <videoBox video="{{video}}"></videoBox>
     </view>
     
 </view>

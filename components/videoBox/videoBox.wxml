@@ -1,11 +1,11 @@
-<view class="videoBox-container">
+<view class="videoBox-container" wx:for="{{video}}" wx:key="index">
     <view class="videoBox-video">
         <!-- 视频 -->
-        <video src="{{item.url}}" data-index="{{index}}" poster="{{item.picUrl}}" bindplay="getMvUrl"></video>
+        <video src="" data-index="{{index}}" poster="{{item.cover}}" bindplay="getMvUrl"></video>
         <!-- 文字 -->
         <view class="textContent">
             <!-- title -->
-            <text>4564654654654654</text>
+            <text>{{item.name}}</text>
             <!-- avatar  接口没有相关头像，所以注掉 -->
             <!-- <image src="/img/avatar1.png"/> -->
         </view>
