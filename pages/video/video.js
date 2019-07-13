@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     //获取推荐mv
-    api.getNewSong({
+    api.getNewMv({
       limit:10
     }).then(res=>{
       this.setData({

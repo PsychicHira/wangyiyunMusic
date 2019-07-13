@@ -43,7 +43,11 @@ module.exports = {
         return REQUEST('top/song',data)
     },
     //获取最新mv
-    getNewSong:(data)=>{
+    getNewMv:(data)=>{
         return REQUEST('mv/first',data)
-    }
+    },
+    //获取mv数据，必选参数 : mvid: mv 的 id
+    getMvInfo:(data)=>{
+        return REQUEST('mv/detail',data)
+    },
 }

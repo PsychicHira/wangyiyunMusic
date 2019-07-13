@@ -13,14 +13,15 @@
     <!-- 互动区域 -->
     <view class="videoBox-interaction">
         <!-- 点赞 评论 -->
+        <view class="avatar">
+            <image src="/img/avatar1.png" />
+            <text>mingzi</text>
+        </view>
         <view class="like">
             <image src="/img/dianzan.png" />
-            <text>111222</text>
+            <text>{{item.likeCount}}</text>
             <image src="/img/comments.png" />
             <text>444555</text>
-        </view>
-        <!-- 更多 -->
-        <view class="more">
             <image src="/img/more.png" />
         </view>
     </view>

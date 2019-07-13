@@ -43,8 +43,16 @@
 }
 .videoBox-interaction text{
     margin: 0 50rpx 0 20rpx;
+    font-size: 25rpx;
 }
-.videoBox-interaction image{
+.videoBox-interaction .avatar image{
+    height: 60rpx;
+    width: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.videoBox-interaction .like image{
     height: 30rpx;
     width: 30rpx;
+    vertical-align: middle;
 }
