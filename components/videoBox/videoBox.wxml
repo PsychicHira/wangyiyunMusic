@@ -15,13 +15,13 @@
         <!-- 点赞 评论 -->
         <view class="avatar">
             <image src="/img/avatar1.png" />
-            <text>mingzi</text>
+            <text>{{item.artists.name}}</text>
         </view>
         <view class="like">
             <image src="/img/dianzan.png" />
             <text>{{item.likeCount}}</text>
             <image src="/img/comments.png" />
-            <text>444555</text>
+            <text>{{item.commentCount}}</text>
             <image src="/img/more.png" />
         </view>
     </view>

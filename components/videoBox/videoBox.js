@@ -39,8 +39,8 @@ Component({
             video : obj
           })
         })
-      
     }
+  
   },
   ready:function(){
     //把video中的id提取出来存入变量mvId
@@ -55,7 +55,9 @@ Component({
   
     //使用mvId获取mv数据信息
     let mvInfo = []
-    this.data.mvId.forEach(element=>{
+    let obj=[]
+    obj = this.data.video
+    this.data.mvId.forEach((element,index)=>{
 
       api.getMvInfo({
         mvid:element
@@ -64,14 +66,37 @@ Component({
         //res.data.commentCount
         //res.data.likeCount
         //res.data.artists.name
+      }).then((res)=>{
+        // console.log("mvInfo",mvInfo)
+        // console.log("obj",obj[index])
+        obj[index].likeCount = mvInfo[index].likeCount
+        obj[index].commentCount = mvInfo[index].commentCount
+        obj[index].artists.name = mvInfo[index].artists.name
+        this.setData({
+          video:obj
+        })
       })
 
     })
     
+    // new Promise((res,rej)=>{
+    //   console.log(789)
+    //   if(true){
+    //     res("zhengque")
+    //   }else{
+    //     rej("cuowu")
+    //   }
+    // }).then(res=>{
+    //   console.log(res)
+    // })
     
     // console.log(mvInfo)
-
-    console.log(this.data.mvInfo)
+    // let obj = this.data.video
+    // obj[0].likeCount = 30
+    // this.setData({
+    //   video:obj
+    // })
+    // console.log(this.data.video)
     // let obj = this.data.video
     
     // for (let i = 0; i < obj.length; i++) {
@@ -84,5 +109,4 @@ Component({
     // })
 
   }
-
 })
