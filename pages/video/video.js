@@ -5,9 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    video:[]
+    video:[],
+    count:2
   },
-
+  //一般方法
+  loadMore:function(){
+    console.log(123)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -19,6 +23,7 @@ Page({
       this.setData({
         video:res.data
       })
+      
       // console.log(res.data)
     })
   },
@@ -62,7 +67,16 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    console.log(this.data.count)
+    api.getNewMv({
+      limit:this.data.count*10
+    }).then(res=>{
+      this.setData({
+        video:res.data,
+        count:this.data.count+1
+      })
+      // console.log(res.data)
+    })
   },
 
   /**
