@@ -3,9 +3,13 @@
 @import '../../components/cloudCountry/cloudCountry.wxss';
 
 .search{
-    height: 70rpx;
-    /* background-color: brown; */
-    margin-bottom: 40rpx;
+    height: 80rpx;
+    width: 100%;
+    background-color: white;
+    /* margin-bottom: 40rpx; */
+    /* position: fixed; */
+    position: fixed;
+    z-index: 1;
 }
 /* 轮播 */
 .lunboCaontainer image{
@@ -13,6 +17,7 @@
     margin-left: 2%;
     height:100%;
     border-radius: 40rpx;
+    margin-top: 80rpx
 }
 .categrory{
     margin-top: 40rpx;

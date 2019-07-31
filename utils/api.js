@@ -1,4 +1,4 @@
-const BASE_URL = "http://192.168.0.2:3000/"
+const BASE_URL = "http://localhost:3000/"
 const REQUEST = (requetUrl,data)=>{
     return new Promise((res,rej)=>{
         let url = BASE_URL + requetUrl

@@ -1,8 +1,11 @@
 {
   "pages": [
-    "pages/video/video",
-    "pages/guide/guide",
     "pages/index/index",
+        "pages/guide/guide",
+
+    "pages/video/video",
+
+
     
     "pages/mine/mine",
     

@@ -3,7 +3,7 @@
     height: 140rpx;
      */
      display: flex;
-     justify-content: space-around;
+     justify-content: space-around; 
 }
 .searchInput{
     /* width: 100%; */

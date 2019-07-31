@@ -89,41 +89,6 @@ Component({
     this.getMvId()
     this.gerMvInfo()
 
-
-    // console.log(this.data.video)
-  
-
-    
-    // new Promise((res,rej)=>{
-    //   console.log(789)
-    //   if(true){
-    //     res("zhengque")
-    //   }else{
-    //     rej("cuowu")
-    //   }
-    // }).then(res=>{
-    //   console.log(res)
-    // })
-    
-    // console.log(mvInfo)
-    // let obj = this.data.video
-    // obj[0].likeCount = 30
-    // this.setData({
-    //   video:obj
-    // })
-    // console.log(this.data.video)
-    // let obj = this.data.video
-    
-    // for (let i = 0; i < obj.length; i++) {
-    //   obj[i].commentCount = this.data.mvInfo[i].commentCount
-    //   obj[i].likeCount = this.data.mvInfo[i].likeCount
-    //   obj[i].artists.name = this.data.mvInfo[i].artists.name
-    // }
-    // this.setData({
-    //   video:obj
-    // })
-
-
       new Promise((res,rej)=>{
         if(true){
           res("zhen")
