@@ -54,6 +54,7 @@
 .songList .title{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 2%;
 }
 .songList .title .left{
@@ -109,6 +110,7 @@
 .newSong .title{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 2%;
     margin-bottom: 30rpx;
 }
