@@ -1,2 +1,6 @@
+<view class="logo_container">
+    <image class="logo" src="../../img/logo.png" />
+</view>
+
 <button>手机登陆</button>
 <button>立即体验</button>

@@ -1,3 +1,21 @@
 page{
-  background-color: red
+  background-color: red;
+}
+.logo_container{
+  text-align: center;
+  position: relative;
+  top: 175rpx;
+}
+.logo{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+
+button{
+  border-radius: 100rpx;
+  width: 550rpx;
+  position: relative;
+  top: 670rpx;
+  margin-bottom: 35rpx;
 }
