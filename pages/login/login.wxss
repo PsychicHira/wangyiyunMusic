@@ -10,12 +10,27 @@ page{
   width: 150rpx;
   height: 150rpx;
 }
-
-
+.btn_container{
+  position: relative;
+  top: 500rpx;
+}
 button{
   border-radius: 100rpx;
   width: 550rpx;
-  position: relative;
-  top: 670rpx;
+  font-weight: 550;
   margin-bottom: 35rpx;
+}
+.login{
+  background-color: white;
+  color: red;
+}
+.experience{
+  background-color: red;
+  color:white;
+  border: 4rpx solid white;
+}
+.agree{
+  position: relative;
+  top:550rpx;
+  text-align: center;
 }

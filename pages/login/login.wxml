@@ -1,6 +1,10 @@
 <view class="logo_container">
     <image class="logo" src="../../img/logo.png" />
 </view>
-
-<button>手机登陆</button>
-<button>立即体验</button>
+<view class="btn_container">
+  <button class="login">手机号登陆</button>
+  <button class="experience">立即体验</button>
+</view>
+<view class="agree">
+  <text>同意服务条款和隐私政策</text>
+</view>
