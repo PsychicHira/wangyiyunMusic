@@ -8,3 +8,9 @@
 <view class="agree">
   <text>同意服务条款和隐私政策</text>
 </view>
+<view class="icon">
+  <image src="../../img/login1.png"></image>
+  <image src="../../img/login2.png"></image>
+  <image src="../../img/login3.png"></image>
+  <image src="../../img/login4.png"></image>
+</view>

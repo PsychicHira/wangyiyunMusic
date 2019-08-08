@@ -1,5 +1,5 @@
 page{
-  background-color: red;
+  background-color: #DB2C1F;
 }
 .logo_container{
   text-align: center;
@@ -22,10 +22,10 @@ button{
 }
 .login{
   background-color: white;
-  color: red;
+  color: #DB2C1F;
 }
 .experience{
-  background-color: red;
+  background-color: #DB2C1F;
   color:white;
   border: 4rpx solid white;
 }
@@ -33,4 +33,15 @@ button{
   position: relative;
   top:550rpx;
   text-align: center;
+}
+.icon{
+  position: relative;
+  top:600rpx;
+  display: flex;
+  justify-content: space-between;
+  padding:0 110rpx;
+}
+.icon image{
+  width: 100rpx;
+  height: 100rpx;
 }
