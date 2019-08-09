@@ -45,3 +45,11 @@ button{
   width: 100rpx;
   height: 100rpx;
 }
+.ckbox{
+  display: inline-block;
+}
+checkbox .ckbox{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+}
