@@ -6,7 +6,9 @@
   <button class="experience">立即体验</button>
 </view>
 <view class="agree">
-<checkbox-group class="ckbox"><checkbox></checkbox></checkbox-group><text>同意服务条款和隐私政策</text>
+<radio-group>
+<radio checked="{{flag}}" bindtap="toggle"></radio>
+</radio-group><text>同意服务条款和隐私政策</text>
 </view>
 <view class="icon">
   <image src="../../img/login1.png"></image>

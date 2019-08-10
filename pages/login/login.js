@@ -5,9 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    flag:false
   },
+  //自定义函数
 
+  //切换radio
+  toggle:function(){
+    this.setData({
+      flag: !this.data.flag
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
