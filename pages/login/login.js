@@ -5,12 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    flag:false
+    flag:true
   },
   //自定义函数
 
   //切换radio
   toggle:function(){
+    console.log(123)
     this.setData({
       flag: !this.data.flag
     })

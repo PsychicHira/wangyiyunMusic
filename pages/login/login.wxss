@@ -45,49 +45,12 @@ button{
   width: 100rpx;
   height: 100rpx;
 }
-.agree radio-group{
+.agree view{
   display: inline-block;
-  /* transform:scale(0.5); */
-}
-
-radio {
-box-sizing: border-box;
-background: none;
-position: absolute;
-width: 100%;
-height: 100%;
-top:0;
-left:0;
-}
-
-radio .wx-radio-input {
-margin-right: 15rpx;
-position: absolute;
-width: 50rpx;
-height: 50rpx%;
-top:0;
-left:0;
-background: none;
-border-radius: 6rpx;
-box-sizing: border-box;
-}
-
-radio .wx-radio-input.wx-radio-input-checked {
-background-color:transparent;
-border-color:#FF2150;
-overflow: hidden;
-box-sizing: border-box;
-}
-
-radio .wx-radio-input.wx-radio-input-checked::before {
-content: '\e60d';
-font-family:"iconfont" !important;
-font-size:30rpx;
-color: #FF2150;
-top:auto;
-left:auto;
-right:-4rpx;
-bottom:-4rpx;
-transform:translate(0, 0) scale(1);
--webkit-transform:translate(0, 0) scale(1);
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%; 
+  border: 2rpx solid rgb(221, 221, 221);
+  vertical-align: middle;
+  margin-right: 20rpx;
 }
