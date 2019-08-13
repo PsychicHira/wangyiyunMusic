@@ -6,7 +6,11 @@
   <button class="experience">立即体验</button>
 </view>
 <view class="agree">
-  <label><view bindtap="toggle" wx:if="{{flag}}"></view></label><text>同意服务条款和隐私政策</text>
+  <label>
+    <view bindtap="toggle" wx:if="{{flag}}"><image src="/img/select.png"></image></view>
+    <view bindtap="toggle" wx:else><image src="/img/selected.png"></image></view>
+  </label>
+  <text>同意<text class="t">《服务条款》</text>和<text class="t">《隐私政策》</text></text>
 </view>
 <view class="icon">
   <image src="../../img/login1.png"></image>

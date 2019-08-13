@@ -47,10 +47,17 @@ button{
 }
 .agree view{
   display: inline-block;
+}
+.agree image{
   width: 30rpx;
   height: 30rpx;
-  border-radius: 50%; 
-  border: 2rpx solid rgb(221, 221, 221);
   vertical-align: middle;
   margin-right: 20rpx;
+}
+.agree text{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 26rpx; 
+}
+.agree .t{
+  color: rgba(255, 255, 255, 0.8);
 }
