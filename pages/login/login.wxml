@@ -13,8 +13,8 @@
   <text>同意<text class="t">《服务条款》</text>和<text class="t">《隐私政策》</text></text>
 </view>
 <view class="icon">
-  <image src="../../img/login1.png"></image>
-  <image src="../../img/login2.png"></image>
-  <image src="../../img/login3.png"></image>
-  <image src="../../img/login4.png"></image>
+  <image bindtap="toast" src="../../img/login1.png"></image>
+  <image bindtap="toast" src="../../img/login2.png"></image>
+  <image bindtap="toast" src="../../img/login3.png"></image>
+  <image bindtap="toast" src="../../img/login4.png"></image>
 </view>
