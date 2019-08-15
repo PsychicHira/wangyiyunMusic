@@ -19,7 +19,7 @@ Page({
   //提示
   toast:function(){
     wx.showToast({
-      title: '暂不支持此登陆方式',
+      title: '暂不支持此方式',
       duration:1500
     })
   },

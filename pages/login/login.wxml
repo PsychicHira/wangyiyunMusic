@@ -3,7 +3,7 @@
 </view>
 <view class="btn_container">
   <button class="login">手机号登陆</button>
-  <button class="experience">立即体验</button>
+  <button bindtap="toast" class="experience">立即体验</button>
 </view>
 <view class="agree">
   <label>
