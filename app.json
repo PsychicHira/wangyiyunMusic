@@ -9,8 +9,9 @@
     "components/cloudCountry/cloudCountry",
     "pages/logs/logs",
     "pages/friend/friend",
-    "pages/account/account"
-
+    "pages/account/account",
+    "pages/login/phone/phone",
+    "pages/login/password/password"
   ],
   "window": {
     "backgroundTextStyle": "light",
