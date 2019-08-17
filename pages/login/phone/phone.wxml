@@ -1,0 +1,6 @@
+<text>未注册手机号登陆后将自动创建账号</text>
+<view>
+  <text>+86</text>
+  <input type="number" maxlength="11"></input>
+</view>
+<button>下一步</button>

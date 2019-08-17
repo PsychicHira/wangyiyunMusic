@@ -2,7 +2,7 @@
     <image class="logo" src="../../img/logo.png" />
 </view>
 <view class="btn_container">
-  <button class="login">手机号登陆</button>
+  <button bindtap="toPhone" class="login">手机号登陆</button>
   <button bindtap="toast" class="experience">立即体验</button>
 </view>
 <view class="agree">
