@@ -1,5 +1,6 @@
 {
   "pages": [
+        "pages/login/phone/phone",
     "pages/login/login",
     "pages/index/index",
     "pages/guide/guide",
@@ -10,7 +11,7 @@
     "pages/logs/logs",
     "pages/friend/friend",
     "pages/account/account",
-    "pages/login/phone/phone",
+
     "pages/login/password/password"
   ],
   "window": {

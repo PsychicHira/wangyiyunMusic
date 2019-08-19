@@ -1,6 +1,6 @@
-<text>未注册手机号登陆后将自动创建账号</text>
-<view>
+<text class="mark">未注册手机号登陆后将自动创建账号</text>
+<view class="container">
   <text>+86</text>
-  <input type="number" maxlength="11"></input>
+  <input type="number" maxlength="11" bindinput="changeColor"></input>
 </view>
-<button>下一步</button>
+<button class="{{redColor?'redColor':''}}" bindtap="next" disabled="isClick">下一步</button>

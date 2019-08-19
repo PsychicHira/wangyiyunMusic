@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    redColor:false,
+    phoneNum:'',
+    isClick:false
   },
 
   /**
@@ -13,9 +15,38 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '当前页面'
+      title: '手机号登陆'
     })
   },
+
+  /**
+   * 自定义函数
+   */
+  //改变button颜色
+  changeColor:function(e){
+    if (e.detail.value){
+      this.setData({
+        redColor:true,
+        isClick:true,
+        phoneNum: e.detail.value
+      })
+    }else{
+      this.setData({
+        redColor: false
+      })
+    }
+  },
+  //下一步跳转
+  next:function(){
+    console.log(1)
+    if(this.data.phoneNum.length < 11){
+      wx.showToast({
+        title: '手机号不正确',
+        duration:2000
+      })
+    }
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

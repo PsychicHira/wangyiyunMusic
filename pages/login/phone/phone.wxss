@@ -1,1 +1,30 @@
-/* pages/login/phone/phone.wxss */
+.mark{
+  display: block;
+  color: #999;
+  font-size: 30rpx;
+  margin: 140rpx 30rpx 100rpx
+}
+.container{
+  margin: 0 30rpx;
+  height: 85rpx;
+  border-bottom: 2rpx solid #E6E6E6;
+}
+.container text{
+  font-size: 38rpx;
+  margin-right: 20rpx;
+  font-weight: 500;
+}
+input{
+  display: inline-block;
+  vertical-align: bottom;
+}
+button[disabled]{
+  color: #FFD3D1 !important;
+  margin: 80rpx 30rpx !important;
+  background-color: #FFCAC6 !important;
+  border-radius: 50rpx !important;
+}
+.redColor {
+  color: white;
+  background-color: #FF2F23;
+}
