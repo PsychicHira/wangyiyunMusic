@@ -3,4 +3,4 @@
   <text>+86</text>
   <input type="number" maxlength="11" bindinput="changeColor"></input>
 </view>
-<button class="{{redColor?'redColor':''}}" bindtap="next" disabled="isClick">下一步</button>
+<button class="{{redColor?'redColor':''}}" bindtap="next" disabled="{{isClick}}">下一步</button>

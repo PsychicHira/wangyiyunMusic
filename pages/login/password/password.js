@@ -12,7 +12,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let phoneNum= wx.getStorageSync('phoneNum')
+    console.log(phoneNum)
 
+    wx.setNavigationBarTitle({
+      title: '手机号登陆'
+    })
   },
 
   /**

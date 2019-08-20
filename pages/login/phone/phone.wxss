@@ -24,7 +24,10 @@ button[disabled]{
   background-color: #FFCAC6 !important;
   border-radius: 50rpx !important;
 }
+
 .redColor {
   color: white;
   background-color: #FF2F23;
+  border-radius: 50rpx;
+  margin: 80rpx 30rpx;
 }

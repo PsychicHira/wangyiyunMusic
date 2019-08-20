@@ -7,7 +7,7 @@ Page({
   data: {
     redColor:false,
     phoneNum:'',
-    isClick:false
+    isClick:true
   },
 
   /**
@@ -27,24 +27,33 @@ Page({
     if (e.detail.value){
       this.setData({
         redColor:true,
-        isClick:true,
+        isClick:false,
         phoneNum: e.detail.value
       })
     }else{
       this.setData({
-        redColor: false
+        redColor: false,
+        isClick: true,
+        phoneNum: e.detail.value
       })
     }
   },
   //下一步跳转
   next:function(){
-    console.log(1)
     if(this.data.phoneNum.length < 11){
       wx.showToast({
         title: '手机号不正确',
         duration:2000
       })
+      return
     }
+    wx.setStorage({
+      key:'phoneNum',
+      data: this.data.phoneNum
+      })
+    wx.navigateTo({
+      url:'/pages/login/password/password'
+    })
   },
 
 
