@@ -6,7 +6,7 @@ Page({
    */
   data: {
     redColor: false,
-    phoneNum: '',
+    passWord: '',
     isClick: true
   },
 
@@ -28,31 +28,31 @@ Page({
       this.setData({
         redColor: true,
         isClick: false,
-        phoneNum: e.detail.value
+        passWord: e.detail.value
       })
     } else {
       this.setData({
         redColor: false,
         isClick: true,
-        phoneNum: e.detail.value
+        passWord: e.detail.value
       })
     }
   },
   //下一步跳转
   next: function () {
-    if (this.data.phoneNum.length < 11) {
+    if (this.data.passWord.length != 8) {
       wx.showToast({
-        title: '手机号不正确',
+        title: '请输入8位密码',
         duration: 2000
       })
       return
     }
     wx.setStorage({
-      key: 'phoneNum',
-      data: this.data.phoneNum
+      key: 'passWord',
+      data: this.data.passWord
     })
-    wx.navigateTo({
-      url: '/pages/login/password/password'
+    wx.switchTab({
+      url: '/pages/index/index',
     })
   },
 
