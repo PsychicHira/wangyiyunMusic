@@ -1,5 +1,6 @@
 {
   "pages": [
+        "pages/login/password/password",
         "pages/login/phone/phone",
     "pages/login/login",
     "pages/index/index",
@@ -10,9 +11,7 @@
     "components/cloudCountry/cloudCountry",
     "pages/logs/logs",
     "pages/friend/friend",
-    "pages/account/account",
-
-    "pages/login/password/password"
+    "pages/account/account"
   ],
   "window": {
     "backgroundTextStyle": "light",
