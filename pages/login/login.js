@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    flag:false
+    flag:true
   },
   //自定义函数
 
