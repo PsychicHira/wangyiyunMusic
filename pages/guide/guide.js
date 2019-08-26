@@ -11,8 +11,8 @@ Page({
   },
   onReady:function(){
     let tm = setInterval(()=>{
-      wx.switchTab({
-        url: '/pages/index/index'
+      wx.navigateTo({
+        url: '/pages/login/login'
       })
       clearInterval(tm)
     },2000)

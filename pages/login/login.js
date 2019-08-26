@@ -20,10 +20,19 @@ Page({
   toast:function(){
     wx.showToast({
       title: '暂不支持此方式',
+      icon: 'none',
       duration:1500
     })
   },
   toPhone:function(){
+    if(this.data.flag){
+      wx.showToast({
+        title: '请先勾选同意《服务条款》和《隐私条款》',
+        icon: 'none',
+        duration: 1500
+      })
+      return
+    }
     wx.reLaunch({
       url: '/pages/login/phone/phone'
     })

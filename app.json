@@ -1,11 +1,11 @@
 {
   "pages": [
-        "pages/index/index",
     "pages/login/login",
-    "pages/login/password/password",
-    "pages/login/phone/phone",
+    "pages/index/index",
 
     "pages/guide/guide",
+    "pages/login/password/password",
+    "pages/login/phone/phone",
     "pages/video/video",
     "pages/mine/mine",
     "components/search/search",
@@ -17,7 +17,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "borderStyle": "white",
