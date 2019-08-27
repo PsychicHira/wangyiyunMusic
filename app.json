@@ -2,7 +2,6 @@
   "pages": [
     "pages/login/login",
     "pages/index/index",
-
     "pages/guide/guide",
     "pages/login/password/password",
     "pages/login/phone/phone",
@@ -16,7 +15,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#00f",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
