@@ -733,7 +733,7 @@ wx:for渲染标签，没有好说的
 
 ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/9.png)
 
-首先用ps抠图，得到图标。
+首先用ps抠图，得到图标。。
 
 
 
