@@ -37,7 +37,7 @@
 
 1. 由于引导页的字体和logo很难找资源还原写原样式，直接用图片。
 
-2. 在page中新建目录guide
+2. 在page中新建目录guide。
 
    guide.wxml
 
