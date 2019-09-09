@@ -19,7 +19,7 @@
 
 # 创建项目
 
-1. 新建项目
+1. 新建项目。
 
    ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/1.png)
 
