@@ -23,7 +23,7 @@
 
    ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/1.png)
 
-2. 在小程序根目录下新建img文件夹，暂时存放图片
+2. 在小程序根目录下新建img文件夹，暂时存放图片。
 
 3. 把引导页放进去
 
