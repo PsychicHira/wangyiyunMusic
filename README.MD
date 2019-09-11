@@ -49,7 +49,7 @@
    >
    > 为什么image外面不用view，因为小程序页面默认有一个外层<page>标签，我们要让image的长宽100%，那么需要给父page标签加一个height="100%"。加一个view没有任何意义
 
-3. guide.wxss
+3. guide.wxss。
 
    ```
    page{
