@@ -83,7 +83,7 @@
 
 # tabBar配置
 
-根据原版app，有5个tabBar，由于网易logo没找到，找了个圆来代替，颜色用ps吸管工具（因为要抠icon，习惯用ps，不抠icon有一款FSCapture桌面吸管工具）
+根据原版app，有5个tabBar，由于网易logo没找到，找了个圆来代替，颜色用ps吸管工具（因为要抠icon，习惯用ps，不抠icon有一款FSCapture桌面吸管工具）。
 
 在app.json中设置
 
