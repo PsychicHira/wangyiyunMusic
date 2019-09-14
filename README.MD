@@ -156,7 +156,7 @@
 
 云村精选同，新建cloudCountry文件夹。
 
-将组件引用至index中(这里要会小程序的组件使用)
+将组件引用至index中(这里要会小程序的组件使用)。
 
 ```html
 <import is="search" src="../../components/search/search.wxml" />
