@@ -29,7 +29,7 @@
 
    ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/2.png)
 
-4. 删除app.wxss中的默认样式
+4. 删除app.wxss中的默认样式。
 
 5. 删除index.wxml和index.wxss的所有内容
 
