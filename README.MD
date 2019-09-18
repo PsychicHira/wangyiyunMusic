@@ -31,7 +31,7 @@
 
 4. 删除app.wxss中的默认样式。
 
-5. 删除index.wxml和index.wxss的所有内容
+5. 删除index.wxml和index.wxss的所有内容。
 
 # 引导页
 
