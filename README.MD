@@ -191,7 +191,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 思路
 
-1. 在根目录utils中新建api.js
+1. 在根目录utils中新建api.js。
 
 2. 声明一个常量存放基本路径
 
