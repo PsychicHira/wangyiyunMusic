@@ -193,7 +193,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 1. 在根目录utils中新建api.js。
 
-2. 声明一个常量存放基本路径
+2. 声明一个常量存放基本路径。
 
 3. 声明一个常量函数，返回一个promise，内部执行wx.request代码
 
