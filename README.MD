@@ -288,7 +288,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
    }
    ```
 
-4. 在index.html中wx：for渲染
+4. 在index.html中wx：for渲染。
 
    ```html
    <swiper-item wx:for="{{banner}}" wx:key="{{index}}">
