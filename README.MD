@@ -195,7 +195,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 2. 声明一个常量存放基本路径。
 
-3. 声明一个常量函数，返回一个promise，内部执行wx.request代码
+3. 声明一个常量函数，返回一个promise，内部执行wx.request代码。
 
    ```js
    const BASE_URL = "http://localhost:3000/"
