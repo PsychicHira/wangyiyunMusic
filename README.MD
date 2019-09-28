@@ -238,7 +238,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 2. 踩了一个坑
 
-   - BASE_URL + url打印出来是正常的
+   - BASE_URL + url打印出来是正常的。
 
    ```js
    return new Promise((res,rej)=>{
