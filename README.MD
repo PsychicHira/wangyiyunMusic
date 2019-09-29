@@ -260,7 +260,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
    ```
 
 
-1. 此时回到index.js，声明一个变量，banner，存放请求到的海报url
+1. 此时回到index.js，声明一个变量，banner，存放请求到的海报url。
 
    ```
    data: {
