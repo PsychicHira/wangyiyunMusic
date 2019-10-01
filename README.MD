@@ -302,7 +302,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 /personalized
 
-截取部分示例
+截取部分示例。
 
 ```js
  "hasTaste": false,
