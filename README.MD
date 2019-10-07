@@ -224,7 +224,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 /banner
 
-1. 导出一个对象
+1. 导出一个对象。
 
    - 首页要获取的就是首页的轮播，对应API是/banner。
 
