@@ -274,7 +274,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
    var api = require('../../utils/api.js')
    ```
 
-3. 在onload声明周期中调用获取banner的API
+3. 在onload声明周期中调用获取banner的API。
 
    ```js
    onLoad: function (options) {
