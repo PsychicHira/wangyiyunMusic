@@ -327,7 +327,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
 声明一个数组personalized，用来存放推荐歌单。
 
-同样在onload中调用api，因为推荐歌单只有6个位置，返回的数据很多，这里我采用截取前面6个，也可以随机获取6个
+同样在onload中调用api，因为推荐歌单只有6个位置，返回的数据很多，这里我采用截取前面6个，也可以随机获取6个。
 
 ```js
 //获取推荐歌单
