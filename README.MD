@@ -346,7 +346,7 @@ api.personalized().then(res=>{
 
 ![image](https://github.com/PsychicHira/wangyiyunMusic/blob/master/img/jietu/5.png)
 
-播放量是再wx:for循环得来的
+播放量是再wx:for循环得来的。
 
 ```html
 <text>▷{{item.playCount}}万</text>
