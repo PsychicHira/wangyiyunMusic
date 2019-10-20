@@ -386,7 +386,7 @@ data: {
 <text>{{num)}}</text>
 ```
 
-- index.wxml中创建一个wxs标签
+- index.wxml中创建一个wxs标签。
 
 ```html
 <wxs module="ceil">
