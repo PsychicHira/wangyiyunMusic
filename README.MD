@@ -521,7 +521,7 @@ data: {
 
 采用第一种方法
 
-1. 在index.js声明2个变量，从personalizedMv遍历获取mv的标识id，根据id发送请求获取到此mv的url
+1. 在index.js声明2个变量，从personalizedMv遍历获取mv的标识id，根据id发送请求获取到此mv的url。
 
    ```
    mvId:[],
