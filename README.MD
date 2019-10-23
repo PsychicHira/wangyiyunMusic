@@ -626,7 +626,7 @@ data: {
 
 
 
-在video标签中给封面加上预览图，数据从推荐mv数组（personalizedMv）中取
+在video标签中给封面加上预览图，数据从推荐mv数组（personalizedMv）中取。
 
 ## 新歌/新碟
 
