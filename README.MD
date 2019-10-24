@@ -173,7 +173,7 @@
 
 https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
 
-1. 安装
+1. 安装。
 
    ```
    $ git clone git@github.com:Binaryify/NeteaseCloudMusicApi.git
