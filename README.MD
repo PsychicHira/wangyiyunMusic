@@ -405,7 +405,7 @@ data: {
 <text>▷{{ceil.ceil(item.playCount)}}万</text>
 ```
 
-至此解决filter过滤数据问题
+至此解决filter过滤数据问题。
 
 ## 获取推荐mv（云村精选）
 
