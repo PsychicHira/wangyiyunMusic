@@ -268,7 +268,7 @@ https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi
      }
    ```
 
-2. 在顶部引入api.js文件
+2. 在顶部引入api.js文件。
 
    ``` js
    var api = require('../../utils/api.js')
